@@ -28,8 +28,8 @@ const SymposiumCalendar = () => {
     endTime?: string | Date;
     location?: string;
     type: keyof typeof eventTypes;
-    description?: string;
-    speakers?: string[];
+    description?: string | string[];
+    speakers?: {name: string; topic: string;}[] | string[];
     details?: string;
   }
 
@@ -38,8 +38,8 @@ const SymposiumCalendar = () => {
       {
         "id": "opening",
         "title": "Opening Ceremony",
-        "startTime": new Date(Date.UTC(2025, 4, 18, 2, 0, 0)),
-        "endTime": "15:30",
+        "startTime": new Date(Date.UTC(2025, 4, 18, 12, 0, 0)),
+        "endTime": new Date(Date.UTC(2025, 4, 18, 12, 30, 0)),
         "type": "ceremony",
         location: "Room 1",
         description: "life is good"
@@ -50,7 +50,11 @@ const SymposiumCalendar = () => {
         "startTime": "15:30",
         "endTime": "17:30",
         "location": "Hall A",
-        "type": "session"
+        "type": "session",
+        speakers: [
+          { name: "n", topic: "b"},
+          { name: "c", topic: "p"}
+        ]
       },
       {
         "id": "s2",
@@ -208,6 +212,8 @@ END:VCALENDAR`;
     document.body.removeChild(link);
   };
 
+  const getTime = (date: Date) => `${date.getHours()}:${date.getMinutes()}`;
+
   const EventCard = ({ event }) => {
     const isExpanded = expandedEventId === event.id;
     
@@ -228,7 +234,7 @@ END:VCALENDAR`;
               </div>
               <p className="text-sm text-gray-600 flex items-center">
                 <Clock className="inline-block h-4 w-4 mr-1" />
-                {event.startTime.toString()} - {event.endTime}
+                {typeof event.endTime !== 'string' && getTime(event.startTime)} - {typeof event.endTime !== 'string' && getTime(event.endTime)}
               </p>
               <p className="text-sm text-gray-600 flex items-center">
                 <MapPin className="inline-block h-4 w-4 mr-1" />
@@ -251,15 +257,15 @@ END:VCALENDAR`;
         {isExpanded && (
           <div className="px-4 pb-4 bg-white bg-opacity-50">
             <div className="pt-2 border-t">
-              {event.description && (
+              {event.description && Array.isArray(event.description) && event.description.map(d =>
                 <div className="mb-2">
-                  <p className="text-sm text-gray-700">{event.description}</p>
+                  <p className="text-sm text-gray-700">{d}</p>
                 </div>
               )}
-              {event.speakers && (
+              {event.speakers && Array.isArray(event.speakers) && event.speakers.filter(s => s.hasOwnProperty("name")).map(s => 
                 <div className="mb-2">
-                  <p className="text-sm font-medium">Speakers:</p>
-                  <p className="text-sm text-gray-600">{event.speakers.join(', ')}</p>
+                  <p className="text-sm font-medium">{s.topic}</p>
+                  <p className="text-sm text-gray-600">{s.name}</p>
                 </div>
               )}
               {event.details && (
