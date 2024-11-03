@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import "./index.css"; // Import your Tailwind CSS file
 import reportWebVitals from './reportWebVitals';
+import SymposiumCalendar from './calendar';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <SymposiumCalendar />
   </React.StrictMode>
 );
 
