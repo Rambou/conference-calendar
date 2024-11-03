@@ -212,8 +212,12 @@ END:VCALENDAR`;
     document.body.removeChild(link);
   };
 
-  const getTime = (date: Date) => `${date.getHours()}:${date.getMinutes()}`;
-
+  const getTime = (date: Date) => {
+    const hours = date.getHours().toString().padStart(2, "0");
+    const minutes = date.getMinutes().toString().padStart(2, "0");
+    return `${hours}:${minutes}`;
+  };
+  
   const EventCard = ({ event }) => {
     const isExpanded = expandedEventId === event.id;
     
