@@ -5,8 +5,8 @@ import { Calendar } from 'lucide-react';
 const AddToCalendarButton = ({ 
   title = "My Event",
   description = "Event description",
-  startTime = new Date().toISOString(),
-  endTime = new Date(Date.now() + 3600000).toISOString(), // 1 hour from now
+  startTime = new Date(),
+  endTime = new Date(Date.now() + 3600000), // 1 hour from now
   location = "Event location"
 }) => {
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -17,7 +17,7 @@ const AddToCalendarButton = ({
       text: title,
       details: description,
       location: location,
-      dates: `${startTime.replace(/[-:]/g, '')}/${endTime.replace(/[-:]/g, '')}`
+      dates: `${startTime.toISOString().replace(/[-:]/g, '')}/${endTime.toISOString().replace(/[-:]/g, '')}`
     });
     return `https://calendar.google.com/calendar/render?${params.toString()}`;
   };

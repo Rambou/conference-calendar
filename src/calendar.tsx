@@ -25,11 +25,11 @@ const SymposiumCalendar = () => {
   interface Event {
     id: string;
     title: string;
-    startTime: string | Date;
-    endTime?: string | Date;
+    startTime: Date;
+    endTime?: Date;
     location?: string;
     type: keyof typeof eventTypes;
-    description?: string | string[];
+    description?: string;
     speakers?: { name: string; topic: string }[] | string[];
     details?: string;
   }
