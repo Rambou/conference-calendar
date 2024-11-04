@@ -53,7 +53,7 @@ const AddToCalendarButton = ({
   return (
     <Button 
       onClick={handleClick}
-      className="flex items-center gap-2"
+      className="ml-4 px-3 py-1 text-sm bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
     >
       <Calendar className="w-4 h-4" />
       Add to Calendar
