@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Calendar, Clock, MapPin, ChevronDown, ChevronUp } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardContent } from "./components/card";
+import { useState } from "react";
+import { Clock, MapPin, ChevronDown, ChevronUp } from "lucide-react";
+import { Card, CardContent } from "./components/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/tab";
 import AddToCalendarButton from "./add-calendar";
 
@@ -142,7 +142,7 @@ const SymposiumCalendar = () => {
         location: "Hall C",
         type: "session1",
         description:
-          "Chairs: Anja Schneider  (DZNE Bohn, Germany), Christian Neri (INSERM & Sorbonne University, France)",
+          "Chairs: Anja Schneider  (DZNE Bonn, Germany), Christian Neri (INSERM & Sorbonne University, France)",
         speakers: [
           {
             name: "Ege Kavalali",
@@ -167,7 +167,7 @@ const SymposiumCalendar = () => {
             affiliation:
               "German Center for Neurodegenerative Diseases (DZNE), Germany",
             topic:
-              "S3-04	Extracellular Vesicles as Biomarkers in Central Nervous System Diseases",
+              "S3-04	Extracellular vesicles as biomarkers in central nervous system diseases",
           },
         ],
       },
@@ -286,13 +286,13 @@ const SymposiumCalendar = () => {
             affiliation:
               "Biomedical  Research  Foundation  Academy  of Athens, Greece",
             topic:
-              "S5-01	Metabolic reprograming of microglia in neurodegenerative disease ",
+              "S5-02 Human brain organoids: understanding the role of the “niche” in neuroregeneration",
           },
           {
             name: "Katia Karalis",
             affiliation: "Regeneron Pharmaceuticals, USA",
             topic:
-              "S5-02	Human brain organoids: understanding the role of the “niche” in neuroregeneration",
+              "S5-03	Microphysiological systems for mapping of cell-cell interactions in the development of human neurodegenerative diseases",
           },
           {
             name: "Kostas Vekrellis",
@@ -358,7 +358,7 @@ const SymposiumCalendar = () => {
           },
           {
             name: "Michal Schwartz",
-            affiliation: "Wiezmann Institute of Science, Israel",
+            affiliation: "Weizmann Institute of Science, Israel",
             topic:
               "S7-02	The brain-immune ecosystem: Supporting brain health in the context of aging and neurodegeneration	",
           },
@@ -746,10 +746,10 @@ const SymposiumCalendar = () => {
             topic: "S16-03	Gut-brain involvement in SCA3",
           },
           {
-            name: "Clévio Nóbrega",
-            affiliation: "University of Algarve, Portugal ",
+            name: "Thorsten Schmidt",
+            affiliation: "University of Tübingen, Germany",
             topic:
-              "S16-04	Hallmarks of polyglutamine spinocerebellar ataxias neurodegeneration",
+              "S16-04	Genetic and molecular factors modifying the pathogenesis of Spinocerebellar Ataxia Type 3",
           },
         ],
       },
@@ -825,7 +825,7 @@ const SymposiumCalendar = () => {
             affiliation:
               "Life and Health Sciences Research Institute, Portugal",
             topic:
-              "S18-04	Dissecting the interplay between Tau and RNA-Binding Protein dyshomeostasis in the precipitating role of chronic stress",
+              "S18-04	Dissecting the interplay between Tau and RNA-Binding Protein dyshomeostasis in the precipitating role of chronic stress on brain pathology",
           },
         ],
       },
@@ -903,7 +903,7 @@ const SymposiumCalendar = () => {
             name: "Angeles Almeida",
             affiliation: "University of Salamanca, Spain",
             topic:
-              "S20-02	Mitochondria-nucleus p53 signaling in Alzheimer’s disease and Stroke",
+              "S20-02	Mitochondria-nucleus p53 signaling in Alzheimer’s disease and stroke",
           },
           {
             name: "Nicoleta Moisoi",
@@ -970,7 +970,7 @@ const SymposiumCalendar = () => {
             name: "Harald Sontheimer",
             affiliation: "University of Virginia, USA",
             topic:
-              "S22-01	Perineuronal Nets modulate intrinsic excitability and synaptic plasticity	",
+              "S22-01	Perineuronal nets modulate intrinsic excitability and synaptic plasticity	",
           },
           {
             name: "Constanze Seidenbecher",
@@ -1054,7 +1054,7 @@ const SymposiumCalendar = () => {
           {
             name: "Anna Antoniou",
             affiliation:
-              "University of Bonn & German Center for Neurodegenerative Diseases Bohn, Germany",
+              "University of Bonn & German Center for Neurodegenerative Diseases Bonn, Germany",
             topic:
               "S24-03	Trans-synaptic signaling via EV and microRNA cargo mediates BDNF-dependent neuronal circuit formation",
           },
@@ -1079,7 +1079,7 @@ const SymposiumCalendar = () => {
             name: "Srdjan Antic",
             affiliation: "University of Connecticut, USA",
             topic:
-              "S25-01	Studying Physiological Hallmarks of Alzheimer’s Disease",
+              "S25-01	Studying physiological hallmarks of Alzheimer’s disease",
           },
           {
             name: "Marco Canepari",
@@ -1097,7 +1097,7 @@ const SymposiumCalendar = () => {
             name: "Ana Cindrić",
             affiliation: "University of Zagreb, Croatia",
             topic:
-              "S25-04	Sweet Disruptions: N-Glycosylation Alterations in Neuronal Differentiation and Trisomy 21",
+              "S25-04	Sweet disruptions: N-glycosylation alterations in neuronal differentiation and trisomy 21",
           },
         ],
       },
