@@ -30,7 +30,7 @@ const SymposiumCalendar = () => {
     location?: string;
     type: keyof typeof eventTypes;
     description?: string;
-    speakers?: { name: string; topic: string }[] | string[];
+    speakers?: { name: string; topic: string; affiliation?: String; }[] | string[];
     details?: string;
   }
 
@@ -301,6 +301,7 @@ const SymposiumCalendar = () => {
         speakers: [
           {
             name: "Katerina Akassoglou (USA)",
+            affiliation: 'ewfwefw',
             topic:
               "S7-01	Unlocking neuroimmune drivers of neurodegeneration: mechanisms and therapies",
           },
@@ -1064,7 +1065,8 @@ END:VCALENDAR`;
                   .map((s) => (
                     <div className="mb-2">
                       <p className="text-sm font-medium">{s.topic}</p>
-                      <p className="text-sm text-gray-600">{s.name}</p>
+                      <p className="text-sm text-gray-600"><u>{s.name}</u></p>
+                      <p className="text-sm text-gray-600">{s.affiliation}</p>
                     </div>
                   ))}
               {event.details && (
@@ -1083,12 +1085,6 @@ END:VCALENDAR`;
   return (
     <div className="p-4 max-w-4xl mx-auto">
       <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Calendar className="h-5 w-5" />
-            ESN Symposium 2025 Schedule
-          </CardTitle>
-        </CardHeader>
         <CardContent>
           <Tabs defaultValue="may-18" className="w-full">
             <TabsList className="grid w-full grid-cols-4">
