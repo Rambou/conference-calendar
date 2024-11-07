@@ -237,7 +237,7 @@ const SymposiumCalendar = () => {
         location: "Hall A",
         type: "session2a",
         description:
-          "Chairs: oão Filipe Oliveira (Portugal), Carmen Falcone (Italy)",
+          "Chairs: João Filipe Oliveira (Portugal), Carmen Falcone (Italy)",
         speakers: [
           {
             name: "João Filipe Oliveira",
@@ -587,7 +587,7 @@ const SymposiumCalendar = () => {
           {
             name: "Giovanna Mallucci",
             affiliation:
-              "Professor of Clinical Neurosciences | Associate Director of the UK Dementia Research Institute, University of University of Cambridge, UK",
+              "Principal Investigator, Altos Labs, Cambridge Institute of Science, UK",
             topic: "",
           },
         ],
