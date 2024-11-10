@@ -160,7 +160,7 @@ const SymposiumCalendar = () => {
             name: "Kenneth W Witwer",
             affiliation: "Johns Hopkins University, USA",
             topic:
-              "S3-03	RNA-containing extracellular vesicles analysis: obstacles and opportunities",
+              "S3-03 Chronic inflammation in neurodegenerative and infectious diseases: extracellular vesicles as friend or foe?",
           },
           {
             name: "Anja Schneider",
@@ -259,7 +259,7 @@ const SymposiumCalendar = () => {
           },
           {
             name: "Carmen Falcone",
-            affiliation: "nternational School for Advanced Studies, Italy",
+            affiliation: "International School for Advanced Studies, Italy",
             topic:
               "S4-04	Varicose-projection astrocytes: from evolution to neuroinflammation ",
           },
@@ -372,7 +372,7 @@ const SymposiumCalendar = () => {
             name: "Dimitra Thomaidou",
             affiliation: "Hellenic Pasteur Institute, Greece",
             topic:
-              "S7-04	The Alzheimer’s disease risk factor BIN1 is a regulator of glial cell response to neuroinflammation},",
+              "S7-04	The Alzheimer’s disease risk factor BIN1 is a regulator of glial cell response to neuroinflammation",
           },
         ],
       },
@@ -520,12 +520,12 @@ const SymposiumCalendar = () => {
           },
           {
             name: "Leena Williams",
-            affiliation: "University of Edinburgh, UK	",
+            affiliation: "University of Edinburgh, UK",
             topic:
               "S11-02	Unraveling how interneurons gate neocortical plasticity and sensory representation",
           },
           {
-            name: "Emmanuel Nivet",
+            name: "Maria Cecilia Angulo",
             affiliation: "University of Paris, France",
             topic:
               "S11-03	Prefrontal low gamma oscillations and fear extinction learning rely on early interneuron-oligodendroglia communication",
@@ -533,7 +533,7 @@ const SymposiumCalendar = () => {
           {
             name: "Maarten Kole",
             affiliation: "Netherlands Institute for Neuroscience, Netherlands",
-            topic: "S11-04	The rhythms of parvalbumin interneuron myelination",
+            topic: "S11-04 The rhythms of parvalbumin interneuron myelination",
           },
         ],
       },
@@ -599,7 +599,7 @@ const SymposiumCalendar = () => {
         endTime: new Date(Date.UTC(2025, 4, 20, 9, 30, 0)),
         location: "Hall A",
         type: "session3a",
-        description: "Chair: Ali Jawaid (University of Zurich, Switzerland)",
+        description: "Chair: Aiman S Saab (University of Zurich, Switzerland)",
         speakers: [
           {
             name: "Rafael Almeida",
@@ -1095,7 +1095,7 @@ const SymposiumCalendar = () => {
           },
           {
             name: "Ana Cindrić",
-            affiliation: "University of Zagreb, Croatia",
+            affiliation: "Genos Glycoscience Research Laboratory, Zagreb, Croatia",
             topic:
               "S25-04	Sweet disruptions: N-glycosylation alterations in neuronal differentiation and trisomy 21",
           },
@@ -1191,15 +1191,6 @@ END:VCALENDAR`;
                 </p>
               )}
             </div>
-            {/* <button
-              onClick={(e) => {
-                e.stopPropagation();
-                generateICSFile(event);
-              }}
-              className="ml-4 px-3 py-1 text-sm bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
-            >
-              Add to Calendar
-            </button> */}
             <AddToCalendarButton {...event} />
           </div>
         </div>

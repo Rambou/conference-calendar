@@ -1,13 +1,14 @@
-import React from 'react';
 import { Button } from './components/button';
-import { Calendar } from 'lucide-react';
+import { Calendar, Speaker } from 'lucide-react';
 
-const AddToCalendarButton = ({ 
+const AddToCalendarButton = ({
   title = "My Event",
   description = "Event description",
   startTime = new Date(),
   endTime = new Date(Date.now() + 3600000), // 1 hour from now
-  location = "Event location"
+  location = "Event location",
+  coordinates = "37.105689, 25.376861",
+  speakers = [],
 }) => {
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
@@ -15,8 +16,8 @@ const AddToCalendarButton = ({
     const params = new URLSearchParams({
       action: 'TEMPLATE',
       text: title,
-      details: description,
-      location: location,
+      details: 'Hall -> location\n\n' + description + '\n\n' + speakers.map((o: any)=> `${o.topic}\n${o.name}: ${o.affiliation}`).join('\n\n').toString(),
+      location: coordinates,
       dates: `${startTime.toISOString().replace(/[-:]/g, '')}/${endTime.toISOString().replace(/[-:]/g, '')}`
     });
     return `https://calendar.google.com/calendar/render?${params.toString()}`;
@@ -33,8 +34,8 @@ const AddToCalendarButton = ({
       `DTSTART:${formatDate(startTime.toISOString())}`,
       `DTEND:${formatDate(endTime.toISOString())}`,
       `SUMMARY:${title}`,
-      `DESCRIPTION:${description}`,
-      `LOCATION:${location}`,
+      `DESCRIPTION:${'Hall -> location\n\n' + description + '\n\n' + speakers.map((o: any)=> `${o.topic}\n${o.name}: ${o.affiliation}`).join('\n\n').toString()}`,
+      `LOCATION:${coordinates}`,
       `BEGIN:VALARM`,
       `TRIGGER:-PT24H`,
       `REPEAT:1`,
